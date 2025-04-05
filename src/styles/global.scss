@@ -1,0 +1,84 @@
+@import './variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  color: $color-text;
+  background-color: $color-background;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+.quiz {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-lg;
+
+  &__title {
+    font-size: $font-size-h1;
+    color: $color-primary;
+    text-align: center;
+    margin-bottom: $spacing-xl;
+    text-shadow: 0 0 10px rgba($color-primary, 0.3);
+  }
+}
+
+.button {
+  padding: $spacing-md;
+  border: none;
+  border-radius: $border-radius-md;
+  background-color: $color-primary;
+  color: white;
+  cursor: pointer;
+  transition: all $transition-duration;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 0 15px rgba($color-primary, 0.3);
+
+  &:hover {
+    background-color: darken($color-primary, 10%);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba($color-primary, 0.5);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &--secondary {
+    background-color: $color-secondary;
+    box-shadow: 0 0 15px rgba($color-secondary, 0.3);
+
+    &:hover {
+      background-color: lighten($color-secondary, 10%);
+      box-shadow: 0 0 20px rgba($color-secondary, 0.5);
+    }
+  }
+
+  &--error {
+    background-color: $color-error;
+    box-shadow: 0 0 15px rgba($color-error, 0.3);
+
+    &:hover {
+      background-color: darken($color-error, 10%);
+      box-shadow: 0 0 20px rgba($color-error, 0.5);
+    }
+  }
+
+  &--success {
+    background-color: $color-success;
+    box-shadow: 0 0 15px rgba($color-success, 0.3);
+
+    &:hover {
+      background-color: darken($color-success, 10%);
+      box-shadow: 0 0 20px rgba($color-success, 0.5);
+    }
+  }
+} 
